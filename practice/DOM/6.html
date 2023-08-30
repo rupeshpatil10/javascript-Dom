@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter</title>
+</head>
+<body>
+    <span id="counter">0</span><br>
+    <button id="increase">Increment</button>
+  
+  <script>
+    const increase = document.getElementById('increase');
+    const counter = document.getElementById('counter');
+
+    let currentValue = 0;
+
+    increase.addEventListener('click', () => {
+        currentValue++;
+        counter.textContent = currentValue;
+    });
+
+  </script>
+  
+</body>
+</html>

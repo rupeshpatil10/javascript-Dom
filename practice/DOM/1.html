@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation Example</title>
+</head>
+<body>
+    <div id="container">
+        <!-- The appended paragraph will go here -->
+    </div>
+    <button id="addButton">Add Paragraph</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const addButton = document.getElementById("addButton");
+            const container = document.getElementById("container");
+            
+            addButton.addEventListener("click", function() {
+                const newParagraph = document.createElement("p");
+                newParagraph.textContent = "Hello, DOM!";
+                container.appendChild(newParagraph);
+            });
+        });
+    </script>
+</body>
+</html>

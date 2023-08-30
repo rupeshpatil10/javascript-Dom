@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <button id="myButton">Click !!</button>
+    <div id="outputDiv"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const myButton = document.getElementById("myButton");
+            const outputDiv = document.getElementById("outputDiv");
+
+            myButton.addEventListener("click", function() {
+                outputDiv.textContent = "button clicked";
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Counter Example</title>
+</head>
+
+<body>
+
+    <div id="list">
+        <ul id="itemList"></ul>
+        <input type="text" id="newItem" placeholder="Enter item text">
+        <button id="addItem">Add Item</button>
+    </div>
+
+    <script>
+        const newItemText = document.getElementById('newItem');
+        const addItemButton = document.getElementById('addItem');
+        const itemList = document.getElementById('itemList');
+
+        addItemButton.addEventListener('click', addItemToList);
+
+        function addItemToList() {
+            const itemText = newItemText.value.trim();
+            if (itemText !== '') {
+            const listItem = document.createElement('li');
+            listItem.textContent = itemText;
+            itemList.appendChild(listItem);
+            newItemText.value = '';
+        } 
+    }
+    </script>
+    
+</body>
+</html>

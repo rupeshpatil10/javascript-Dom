@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form id="input" style="display: flex; justify-content: center;">
+        <input type="text" id="input-field" placeholder="Enter Text">
+        <button type="submit">Submit</button>
+    </form>
+
+    <div style="display: flex; justify-content: center;">
+        <p id="message"></p>
+    </div>
+
+    <script>
+        const form = document.getElementById("input");
+        const inputField = document.getElementById("input-field");
+        const message = document.getElementById("message");
+
+        form.addEventListener("submit", (submit) => {
+            submit.preventDefault();
+            const inputValue = inputField.value
+
+            if (inputValue === "") {
+                message.textContent = " Enter a text";
+                message.style.color = "red";
+            } else {
+                message.textContent = "Success.";
+                message.style.color = "green";
+            }
+        });
+    </script>
+</html>

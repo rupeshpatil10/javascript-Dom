@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="toggle">Click!</button>
+    <p style="display:none" id="hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit aut excepturi beatae, dolores corporis officiis? Illo commodi ut rerum saepe ex perferendis eaque asperiores porro officia laborum, quisquam dolore nam.</p>
+    <script>
+        const toggleBtn = document.getElementById('toggle');
+        const hidden = document.getElementById('hidden');
+
+        toggleBtn.addEventListener('click', () => {
+            if (hidden.style.display === 'none') {
+                hidden.style.display = 'block';
+            } else {
+                hidden.style.display = 'none';
+            }
+            });
+    </script>
+</body>
+</html>
